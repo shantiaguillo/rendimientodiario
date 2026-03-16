@@ -176,6 +176,16 @@ const totalUI = document.getElementById("total")
 const boton = document.getElementById("boton")
 const input = document.getElementById("valor")
 
+// ENTER agrega o actualiza automáticamente
+input.addEventListener("keydown",function(e){
+
+if(e.key==="Enter"){
+e.preventDefault()
+accion()
+}
+
+})
+
 function guardar(){
 localStorage.setItem("registro",JSON.stringify(datos))
 }
